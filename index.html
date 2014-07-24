@@ -16,6 +16,10 @@
     <script type="text/javascript" async="" src="./assets/plusone.js" gapi_processed="true"></script>
     <script type="text/javascript" async="" src="./assets/ga.js"></script>
 
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/south-street/jquery-ui.css" id="theme">
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="http://blueimp.github.io/jQuery-Image-Gallery/css/demo.css">
+
     <link href='fullcalendar.css' rel='stylesheet' />
     <link href='fullcalendar.print.css' rel='stylesheet' media='print' />
     <script src='lib/moment.min.js'></script>
@@ -259,19 +263,74 @@
       <section class="section section--photo-gallery section--with-gradient js-tab-content" data-index="4" id="photo-gallery" style="display: block;">
         <div class="content">
           <div class="column column--right with-example">
-            <img alt="" class="example" src="./assets/google-plus.png">
+            &nbsp;
           </div>
           <div class="column column--left with-copy">
             <div class="copy text--center">
-              <h2 class="headline with-icon">
-                <span class="icon icon--google-plus">Google Plus</span> Photo gallery
-              </h2>
-              <p class="sub-headline">
-                Section to show all the photos of this event
-              </p>
+              <form>
+                <button type="button" id="slideshow-button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-image"></span><span class="ui-button-text">Slideshow</span></button>
+                <select id="effect-switcher">
+                    <option>blind</option>
+                    <option>clip</option>
+                    <option>drop</option>
+                    <option selected="">fade</option>
+                    <option>fold</option>
+                    <option>puff</option>
+                    <option>slide</option>
+                    <option>scale</option>
+                </select>
+                <select id="theme-switcher">
+                    <option value="base">Base</option>
+                    <option value="black-tie">Black Tie</option>
+                    <option value="blitzer">Blitzer</option>
+                    <option value="cupertino">Cupertino</option>
+                    <option value="dark-hive">Dark Hive</option>
+                    <option value="dot-luv">Dot Luv</option>
+                    <option value="eggplant">Eggplant</option>
+                    <option value="excite-bike">Excite Bike</option>
+                    <option value="flick">Flick</option>
+                    <option value="hot-sneaks">Hot sneaks</option>
+                    <option value="humanity">Humanity</option>
+                    <option value="le-frog">Le Frog</option>
+                    <option value="mint-choc">Mint Choc</option>
+                    <option value="overcast">Overcast</option>
+                    <option value="pepper-grinder">Pepper Grinder</option>
+                    <option value="redmond">Redmond</option>
+                    <option value="smoothness">Smoothness</option>
+                    <option value="south-street" selected="">South Street</option>
+                    <option value="start">Start</option>
+                    <option value="sunny">Sunny</option>
+                    <option value="swanky-purse">Swanky Purse</option>
+                    <option value="trontastic">Trontastic</option>
+                    <option value="ui-darkness">UI Darkness</option>
+                    <option value="ui-lightness">UI Lightness</option>
+                    <option value="vader">Vader</option>
+                </select>
+            </form>
+              <div class="sub-headline">
+                <!-- The container for the list of example images -->
+                  <div id="links" style="width:1000px"><a href="http://farm4.static.flickr.com/3884/14540962227_539eb31e6a_b.jpg" title="Blind wall" data-dialog=""><img src="./jQuery Image Gallery Demo_files/14540962227_539eb31e6a_s.jpg"></a><a href="http://farm6.static.flickr.com/5579/14537891180_60cacb6a51_b.jpg" title="Summertime in the Palouse" data-dialog=""><img src="./jQuery Image Gallery Demo_files/14537891180_60cacb6a51_s.jpg"></a><a href="http://farm4.static.flickr.com/3881/14726902905_b9fcd04f7b_b.jpg" title="Alpenglow Over the Glacier d&#39;Argentiere, French Alps" data-dialog=""><img src="./jQuery Image Gallery Demo_files/14726902905_b9fcd04f7b_s.jpg"></a><a href="http://farm4.static.flickr.com/3911/14722707894_89ffeff506_b.jpg" title="Bellevue(beautiful view)" data-dialog=""><img src="./jQuery Image Gallery Demo_files/14722707894_89ffeff506_s.jpg"></a></div>
+                  <!-- The dialog widget -->
+
+                  <div id="blueimp-gallery-dialog" data-show="fade" data-hide="fade" style="visibility: visible; height: 0px; overflow: visible;" class="">
+                      <!-- The Gallery widget  -->
+                      <div class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls" style="width: 1125.3333333333333px; display: none;">
+                          <div class="slides" style="width: 112600px;"></div>
+                          <a class="prev">‹</a>
+                          <a class="next">›</a>
+                          <a class="play-pause"></a>
+                      </div>
+                  </div>
+              </div>
             </div>
         </div>
       </section>
+
+      <script src="./jQuery Image Gallery Demo_files/jquery.min.js"></script>
+    <script src="./jQuery Image Gallery Demo_files/jquery-ui.min.js"></script>
+    <script src="./jQuery Image Gallery Demo_files/jquery.blueimp-gallery.min.js"></script>
+    <script src="./jQuery Image Gallery Demo_files/jquery.image-gallery.js"></script>
+    <script src="./jQuery Image Gallery Demo_files/demo.js"></script>
       <!-- /Photo gallery section -->
 
       <!-- FAQs section -->
